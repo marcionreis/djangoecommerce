@@ -2,11 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-	texts = [ 'Lorem ipsum dolor sit amet', 'consetetur adipisicing elit']
-	context = {
+	return render(request, 'index.html')
 
-		'title': 'django e-commerce',
-		'texts': texts
-	}
-	return render(request, 'index.html', context)
-# Create your views here.
+def contact(request):
+	return render(request, 'contact.html')
+
+def product_list(request):
+	return render(request, 'product_list.html')
+
+def product(request):
+	return render(request, 'product.html')
+
+
