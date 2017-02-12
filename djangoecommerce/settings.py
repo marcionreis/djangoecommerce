@@ -139,6 +139,12 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
+# E-mail
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST_USER = 'marciorneres@hotmail.com'
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+
 try:
     from .local_settings import *
 except ImportError:
